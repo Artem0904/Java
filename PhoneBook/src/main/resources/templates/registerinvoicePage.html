@@ -44,6 +44,15 @@
                      class="form-control" />
             </div>
           </div> <br/>
+          <div class="row">
+            <div class="col-2">
+              <label for="amount"><b>FILE</b></label>
+            </div>
+            <div class="col-4">
+              <input type="file" name="file" id="file"
+                     class="form-control" />
+            </div>
+          </div> <br/>
           <button type="submit" class="btn btn-success">Save Invoice <i class="fa fa-plus-square" aria-hidden="true"></i></button>
           <a th:href="@{/invoice/getAllInvoices}" class= "btn btn-primary">Show All Invoices</a>
         </form>

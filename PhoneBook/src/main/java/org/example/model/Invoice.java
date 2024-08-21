@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import java.io.File;
+
 import static javax.persistence.GenerationType.*;
 
 @Entity
@@ -23,4 +25,5 @@ public class Invoice {
     private String name;
     private String location;
     private Double amount;
+    private File file;
 }
