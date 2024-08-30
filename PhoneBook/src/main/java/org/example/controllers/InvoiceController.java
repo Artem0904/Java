@@ -1,7 +1,8 @@
-package org.example.conroller;
+package org.example.controllers;
 
 import org.example.exception.InvoiceNotFoundException;
-import org.example.model.Invoice;
+import org.example.entities.Invoice;
+import org.example.models.InvoiceCreateModel;
 import org.example.service.IInvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,10 @@ public class InvoiceController {
     @Autowired
     private IInvoiceService service;
 
+    @GetMapping("/")
+    public String showHomePage() {
+        return "homePage";
+    }
 
     @GetMapping("/register")
     public String showRegistration() {
@@ -26,15 +31,12 @@ public class InvoiceController {
 
     @PostMapping("/save")
     public String saveInvoice(
-            @ModelAttribute Invoice invoice,
-            //  Model model,
+            @ModelAttribute InvoiceCreateModel model,
+          //  Model model,
             RedirectAttributes attributes
     ) {
-        service.saveInvoice(invoice);
-        Long id = service.saveInvoice(invoice).getId();
-        //String message = "Record with id : '"+id+"' is saved successfully !";
-//        model.addAttribute("message", message);
-//        return "registerInvoicePage";
+//        service.saveInvice(model);
+        Long id = service.saveInvice(model).getId();
 
         attributes.addAttribute("message", "Record with id : '"+id+"' is saved successfully !");
         return "redirect:getAllInvoices";
@@ -45,7 +47,7 @@ public class InvoiceController {
             @RequestParam(value = "message", required = false) String message,
             Model model
     ) {
-        List<Invoice> invoices= service.getAllInvoices();
+        var invoices= service.getAllInvoices();
         model.addAttribute("list", invoices);
         model.addAttribute("message", message);
         return "allInvoicesPage";

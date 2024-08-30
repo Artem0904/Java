@@ -1,9 +1,13 @@
 package org.example.service.impl;
 
-
-import org.example.model.Invoice;
+import org.example.exception.InvoiceNotFoundException;
+import org.example.entities.Invoice;
+import org.example.mapper.InvoiceMapper;
+import org.example.models.InvoiceCreateModel;
+import org.example.models.InvoiceItemModel;
 import org.example.repo.InvoiceRepository;
 import org.example.service.IInvoiceService;
+import org.example.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +19,30 @@ public class InvoiceServiceImpl implements IInvoiceService {
 
     @Autowired
     private InvoiceRepository repo;
+    @Autowired
+    private StorageService storageService;
+    @Autowired
+    private InvoiceMapper invoiceMapper;
 
     @Override
-    public Invoice saveInvoice(Invoice invoice) {
-        return repo.save(invoice);
+    public Invoice saveInvice(InvoiceCreateModel model) {
+        try {
+            Invoice invoice = new Invoice();
+            invoice.setName(model.getName());
+            invoice.setAmount(model.getAmount());
+            var imageName = storageService.saveFile(model.getImage());
+            invoice.setImage(imageName);
+            invoice.setLocation(model.getLocation());
+            return repo.save(invoice);
+        }
+        catch (Exception ex) {
+            return null;
+        }
     }
 
     @Override
-    public List<Invoice> getAllInvoices() {
-        return repo.findAll();
+    public List<InvoiceItemModel> getAllInvoices() {
+        return invoiceMapper.MapInvoices(repo.findAll());
     }
 
     @Override
@@ -32,7 +51,7 @@ public class InvoiceServiceImpl implements IInvoiceService {
         if(opt.isPresent()) {
             return opt.get();
         } else {
-            throw new org.example.exception.InvoiceNotFoundException("Invoice with Id : "+id+" Not Found");
+            throw new InvoiceNotFoundException("Invoice with Id : "+id+" Not Found");
         }
     }
 
