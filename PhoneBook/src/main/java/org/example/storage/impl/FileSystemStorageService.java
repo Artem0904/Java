@@ -22,6 +22,8 @@ public class FileSystemStorageService implements StorageService {
 
     private final Path rootLocation;
 
+    private final int [] sizes = {32,150,300,600,1200};
+
     public FileSystemStorageService(StorageProperties properties) {
         this.rootLocation = Paths.get(properties.getLocation());
     }
@@ -46,16 +48,32 @@ public class FileSystemStorageService implements StorageService {
     }
 
     @Override
-    public String SaveImage(MultipartFile file, FileSaveFormat format) throws IOException {
+    public String saveImage(MultipartFile file, FileSaveFormat format) throws IOException {
         String ext = format.name().toLowerCase();
         String randomFileName = UUID.randomUUID().toString()+"."+ext;
-        int [] sizes = {32,150,300,600,1200};
+
         var bufferedImage = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
         for (var size : sizes) {
             String fileSave = rootLocation.toString()+"/"+size+"_"+randomFileName;
             Thumbnails.of(bufferedImage).size(size, size).outputFormat(ext).toFile(fileSave);
         }
         return randomFileName;
+    }
+
+    @Override
+    public void deleteImage(String imageName) throws IOException {
+        if(imageName != null && !imageName.isEmpty()){
+            for(int size:sizes){
+                String name = size + "_" + imageName;
+                Path imagePath = this.rootLocation.resolve(name).normalize().toAbsolutePath();
+                //Path imagePath = imageDirPath.resolve(name);
+                try {
+                    Files.deleteIfExists(imagePath);
+                }
+                catch (IOException ignored) {
+                }
+            }
+        }
     }
 
     private String getFileExtension(MultipartFile file) {

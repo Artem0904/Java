@@ -20,7 +20,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.mapstruct.version>1.6.0</org.mapstruct.version>
-        <org.lombok.version>1.18.34</org.lombok.version>
+        <org.lombok.version>1.18.30</org.lombok.version>
         <org.springframework.boot.version>2.7.18</org.springframework.boot.version>
     </properties>
 
@@ -95,6 +95,12 @@
             <version>0.4.20</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>7.0.5.Final</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -110,8 +116,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>17</source> <!-- depending on your project -->
-                    <target>17</target> <!-- depending on your project -->
+                    <source>11</source> <!-- depending on your project -->
+                    <target>11</target> <!-- depending on your project -->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
