@@ -12,7 +12,7 @@ target/
 *.iml
 *.ipr
 
-### uploading/
+uploading/
 
 ### Eclipse ###
 .apt_generated
