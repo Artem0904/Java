@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 //import java.util.Date;
 
@@ -28,7 +29,7 @@ public class Category {
     private String description;
 
     @Column(name="date_created")
-    private LocalDateTime creationTime;
+    private Date creationTime;
 
     @OneToMany(mappedBy = "category",cascade = CascadeType.ALL)
     private List<Product> products;

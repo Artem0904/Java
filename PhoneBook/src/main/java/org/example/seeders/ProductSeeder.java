@@ -11,7 +11,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -45,7 +44,8 @@ public class ProductSeeder implements CommandLineRunner {
                 imagesFutures.add(
                         CompletableFuture.supplyAsync(() -> {
                             try {
-                                return storageService.saveImage("https://picsum.photos/300/300", FileFormats.WEBP);
+//                                return storageService.saveImage("https://picsum.photos/300/300", FileFormats.WEBP);
+                                return storageService.saveImage("https://loremflickr.com/800/600/kyiv,girl/all", FileFormats.WEBP);
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
@@ -72,7 +72,7 @@ public class ProductSeeder implements CommandLineRunner {
                             faker.commerce().productName(),
                             imagesUrls.get(imageIndex++),
                             faker.lorem().sentence(10),
-                            LocalDateTime.now(),
+                            new Date(),
                             new ArrayList<>()
                     );
 
@@ -123,4 +123,3 @@ public class ProductSeeder implements CommandLineRunner {
         }
     }
 }
-

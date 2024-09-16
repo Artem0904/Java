@@ -18,6 +18,7 @@ import org.springframework.data.domain.Page;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Optional;
 
 @Service
@@ -36,7 +37,7 @@ public class CategoryService implements ICategoryService {
             Category category = mapper.fromCreationModel(categoryModel);
             String imageName = storageService.saveImage(categoryModel.getFile(), FileFormats.JPG);
             category.setImage(imageName);
-            category.setCreationTime(LocalDateTime.now());
+            category.setCreationTime(new Date());
             Category savedCategory = repo.save(category);
             return savedCategory.getId();
         }
@@ -90,7 +91,7 @@ public class CategoryService implements ICategoryService {
         if(isPresent){
             Category category = mapper.fromCreationModel(categoryModel);
             category.setImage(optCategory.get().getImage());
-            category.setCreationTime(LocalDateTime.now());
+            category.setCreationTime(new Date());
             if(categoryModel.getFile()!=null && !categoryModel.getFile().isEmpty() ){
                 storageService.deleteImage(optCategory.get().getImage());
                 String imageName = storageService.saveImage(categoryModel.getFile(),FileFormats.WEBP);
