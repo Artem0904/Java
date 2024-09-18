@@ -1,7 +1,7 @@
 package org.example.dtos;
 
 import lombok.Data;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 public class CategoryDto {
@@ -9,5 +9,5 @@ public class CategoryDto {
     private String name;
     private String image;
     private String description;
-    private LocalDateTime creationTime;
+    private Date creationTime;
 }
