@@ -1,5 +1,6 @@
 package org.example.exceptions;
 
+
 public class CategoryException extends RuntimeException{
 
     public CategoryException() {

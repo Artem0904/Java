@@ -1,6 +1,7 @@
 package org.example.services;
 
 import net.coobird.thumbnailator.Thumbnails;
+import org.example.configurations.StorageProperties;
 import org.example.exceptions.StorageException;
 import org.apache.commons.io.FilenameUtils;
 import org.example.interfaces.IStorageService;
@@ -18,21 +19,23 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Objects;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
+
 
 @Service
 public class StorageService implements IStorageService {
-    private final Path rootLocation;
     private final int [] sizes = {32,150,300,600,1200};
+    private final Path rootLocation;
+
+    public StorageService(StorageProperties properties) throws IOException {
+        this.rootLocation = Paths.get(properties.getLocation());
+    }
 
     @Override
     public void init() throws IOException {
         if(!Files.exists(rootLocation))
             Files.createDirectory(rootLocation);
     }
-    public StorageService(StorageProperties properties) throws IOException {
-        this.rootLocation = Paths.get(properties.getLocation());
-    }
+
 
     @Override
     public String saveFile(MultipartFile file) {
@@ -47,7 +50,7 @@ public class StorageService implements IStorageService {
             Path destinationFile = this.rootLocation.resolve(fileName)
                     .normalize().toAbsolutePath();
             if (!destinationFile.getParent().equals(this.rootLocation.toAbsolutePath())) {
-                throw new StorageException(
+                  throw new StorageException(
                         "Cannot store file outside current directory.");
             }
             try (InputStream inputStream = file.getInputStream()) {
@@ -82,10 +85,10 @@ public class StorageService implements IStorageService {
 
     @Override
     public String saveImage(String fileUrl, FileFormats format) throws IOException {
-        try (InputStream inputStream = new URL(fileUrl).openStream()) {
-            BufferedImage bufferedImage = ImageIO.read(inputStream);
-            return saveBufferedImage(bufferedImage, format);
-        }
+         try (InputStream inputStream = new URL(fileUrl).openStream()) {
+                BufferedImage bufferedImage = ImageIO.read(inputStream);
+                return saveBufferedImage(bufferedImage, format);
+         }
     }
 
     @Override
@@ -98,7 +101,6 @@ public class StorageService implements IStorageService {
         }
         return randomFileName;
     }
-
 
     @Override
     public void deleteImage(String imageName) throws IOException {
