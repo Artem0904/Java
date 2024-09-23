@@ -1,6 +1,6 @@
 package org.example.controllers;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import org.example.interfaces.IAuthenticationService;
 import org.example.models.AuthenticationResponse;
 import org.example.models.SignInRequest;

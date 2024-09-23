@@ -1,9 +1,8 @@
 package org.example.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -24,7 +23,7 @@ public class Product {
     private String description;
 
     @Column(name = "date_created")
-    private Date creationTime;
+    private LocalDateTime creationTime;
 
     @Column(nullable = false, precision = 2)
     private double price;

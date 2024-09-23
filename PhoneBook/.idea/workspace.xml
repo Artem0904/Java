@@ -6,12 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="897e7743-4753-4c94-af7f-801969205a8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/CustomWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/CustomWebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/CustomAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/CustomAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/InvoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/CategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/InvoiceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/InvoiceDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductImageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductImageDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Category.java" afterDir="false" />
@@ -21,42 +24,31 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/UserRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/CategoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/CategoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/InvoiceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/InvoiceNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ProductException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ProductException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/StorageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/StorageException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/UserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IStorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserRolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserRolesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/InvoiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/InvoiceCreationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/InvoiceCreationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/seeders/ProductSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/seeders/ProductSeeder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/StorageProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/StorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/allInvoicesPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editInvoicePage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/homePage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerinvoicePage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-react-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/category/category-table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/category/category-table/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/error/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/error/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/favorite-button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/favorite-button/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/layout/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/layout/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/menu/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/product/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/product/product-create/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/product/product-create/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/product/ProductCard/HorizontalProduct/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/product/ProductCard/HorizontalProduct/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/product/product-table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/product/product-table/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/user/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/user/login/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-react-app/src/env/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/env/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/helpers/DateTime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/helpers/DateTime.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-react-app/src/helpers/common-methods.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/helpers/common-methods.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/helpers/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/helpers/constants.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/interceptor/interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/interceptor/interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/models/Props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/models/Props.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/models/Product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/models/Product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/services/accountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/services/accountService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/services/productService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/services/productService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-react-app/src/services/storageService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/services/storageService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +84,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RunManager">
@@ -126,7 +118,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../jdk-17.0.11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SpringApp" />
       <extension name="coverage">
@@ -152,11 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

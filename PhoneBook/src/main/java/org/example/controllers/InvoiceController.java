@@ -1,6 +1,6 @@
 package org.example.controllers;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import org.example.dtos.InvoiceDto;
 import org.example.exceptions.InvoiceNotFoundException;
 import org.example.interfaces.IInvoiceService;

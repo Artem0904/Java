@@ -1,9 +1,8 @@
 package org.example.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -26,7 +25,7 @@ public class Category {
     private String description;
 
     @Column(name="date_created")
-    private Date creationTime;
+    private LocalDateTime creationTime;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;

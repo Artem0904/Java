@@ -37,7 +37,7 @@ public class ProductService implements IProductService {
             product.setId(0L);
             List<ProductImage> images = new ArrayList<>();
             int index = 0;
-            Date date = new Date();
+            LocalDateTime date = LocalDateTime.now();
             for(var file:productModel.getFiles()){
                 ProductImage image = new ProductImage(
                         0L,
@@ -105,7 +105,7 @@ public class ProductService implements IProductService {
             storageService.deleteImages(product.getImages()
                     .stream()
                     .map(ProductImage::getName)
-                    .collect(Collectors.toList()));
+                    .toList());
         }
         return  isPresent;
     }
@@ -117,7 +117,7 @@ public class ProductService implements IProductService {
         if(isPresent){
             Product product = mapper.fromCreationModel(productModel);
             var oldImages = new ArrayList<>(optProduct.get().getImages());
-            product.setCreationTime(new Date());
+            product.setCreationTime(LocalDateTime.now());
             List<ProductImage> newImagesList = new ArrayList<ProductImage>() ;
             if(productModel.getFiles() != null) {
                 int index = -1;
@@ -129,7 +129,7 @@ public class ProductService implements IProductService {
                                     0L,
                                     storageService.saveImage(file, FileFormats.WEBP),
                                     index,
-                                    new Date(),
+                                    LocalDateTime.now(),
                                     false,
                                     product
                             );
@@ -170,7 +170,7 @@ public class ProductService implements IProductService {
             repo.save(product);
             if(!oldImages.isEmpty()){
                 imageRepo.deleteAll(oldImages);
-                var imagesToDelete = Arrays.stream(oldImages.toArray(ProductImage[]::new)).map(ProductImage::getName).collect(Collectors.toList());
+                var imagesToDelete = Arrays.stream(oldImages.toArray(ProductImage[]::new)).map(ProductImage::getName).toList();
                 storageService.deleteImages(imagesToDelete);
             }
         }

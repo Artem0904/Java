@@ -6,13 +6,13 @@ import { paginatorConfig } from '../../../helpers/constants';
 import { categoryService } from '../../../services/categoryService';
 import { APP_ENV } from '../../../env';
 import { getQueryString } from '../../../helpers/common-methods';
+import { DeleteDialog } from '../../common-components/DeleteDialog';
+import { PagintionData } from '../../../models/PaginationData';
+import { DateTime } from '../../../helpers/DateTime';
 
 
 const imageFolder = `${APP_ENV.SERVER_HOST}${APP_ENV.IMAGES_FOLDER}`
-interface PagintionData {
-  page: number,
-  pageSize: number
-}
+
 const CategoryTable: React.FC = () => {
   const navigate = useNavigate();
   const [data, setData] = useState<ICategory[]>()
@@ -52,14 +52,17 @@ const CategoryTable: React.FC = () => {
       title: 'Date',
       key: 'date',
       dataIndex: 'creationTime',
-      render: (date: string) => <span> {date.slice(0, 10)}</span>
+      render: (date: string) => <div className='d-flex flex-column gap-2 text-center'> {new DateTime(date).ShortDate} {new DateTime(date).FullTime}</div>,
+      width:100
     },
     {
       title: 'Actions',
       key: 'action',
       render: (element: ICategory) =>
         <Space>
-          <Button onClick={() => deleteCategory(element.id)} danger type="primary">Delete</Button>
+          <DeleteDialog title={"re you sure?"}
+                        description={`Delete "${element.name}" category?` }
+                        onSubmit ={() => deleteCategory(element.id)}  />
           <Button onClick={() => navigate(`create?id=${element.id}`)} type='primary'>Edit</Button>
         </Space>
     },

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -71,7 +70,7 @@ public class ProductSeeder implements CommandLineRunner {
                             faker.commerce().productName(),
                             imagesUrls.get(imageIndex++),
                             faker.lorem().sentence(10),
-                            new Date(),
+                            LocalDateTime.now(),
                             new ArrayList<>()
                     );
 
@@ -82,7 +81,7 @@ public class ProductSeeder implements CommandLineRunner {
                                 null,
                                 faker.commerce().productName(),
                                 faker.lorem().sentence(10),
-                                new Date(),
+                                LocalDateTime.now(),
                                 faker.number().randomDouble(2, 10, 100),
                                 faker.number().randomDouble(2, 0, 20),
                                 category,
@@ -96,7 +95,7 @@ public class ProductSeeder implements CommandLineRunner {
                                     null,
                                     imagesUrls.get(imageIndex++),
                                     k,
-                                    new Date(),
+                                    LocalDateTime.now(),
                                     false,
                                     product
                             ));

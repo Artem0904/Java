@@ -1,9 +1,9 @@
 package org.example.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
-import java.util.Date;
+
 
 
 @Getter
@@ -23,7 +23,7 @@ public class ProductImage {
     private int priority;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dateCreated;
+    private LocalDateTime dateCreated;
 
     private boolean isDelete;
 

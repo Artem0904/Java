@@ -1,7 +1,10 @@
 package org.example.exceptions;
 
-public class ProductException extends RuntimeException{
+import java.io.Serial;
 
+public class ProductException extends RuntimeException{
+    @Serial
+    private static final long serialVersionUID = 1L;
     public ProductException() {
         super();
     }
