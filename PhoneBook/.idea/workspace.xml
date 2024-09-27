@@ -5,45 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="897e7743-4753-4c94-af7f-801969205a8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../my-react-app/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my-react-app/src/store/reducers/CounterReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapping/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapping/ProductMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapping/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapping/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/seeders/ProductSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/seeders/ProductSeeder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/seeders/UserSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/seeders/UserSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/favorite-button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/favorite-button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/favorites/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/favorites/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/layout/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/components/user/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/components/user/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/services/accountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/services/accountService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/services/storageService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/services/storageService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-react-app/src/store/userStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../my-react-app/src/store/userStore.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,18 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Streltsov1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Streltsov1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Artem0904/Java.git",
-    "accountId": "5a0ad2a0-5048-4863-87cd-fbfa4929e9fb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Artem0904/Java.git&quot;,
+    &quot;accountId&quot;: &quot;5a0ad2a0-5048-4863-87cd-fbfa4929e9fb&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -85,16 +58,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dev/Java/PhoneBook",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dev/Java/PhoneBook&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />

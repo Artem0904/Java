@@ -42,8 +42,7 @@ public class ProductSeeder implements CommandLineRunner {
                 imagesFutures.add(
                         CompletableFuture.supplyAsync(() -> {
                             try {
-                                return storageService.saveImage("https://loremflickr.com/800/600/kyiv,girl/all", FileFormats.WEBP);
-//                                return storageService.saveImage("https://picsum.photos/300/300", FileFormats.WEBP);
+                                return storageService.saveImage("https://picsum.photos/300/300", FileFormats.WEBP);
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
@@ -58,7 +57,7 @@ public class ProductSeeder implements CommandLineRunner {
             allImages.thenRun(() -> {
                 List<String> imagesUrls = imagesFutures.parallelStream()
                         .map(CompletableFuture::join)
-                        .collect(Collectors.toList());;
+                        .collect(Collectors.toList());
                 executor.shutdown();
                 List<Category> categories = new ArrayList<>();
                 int imageIndex = 0;
@@ -85,6 +84,7 @@ public class ProductSeeder implements CommandLineRunner {
                                 faker.number().randomDouble(2, 10, 100),
                                 faker.number().randomDouble(2, 0, 20),
                                 category,
+                                Set.of(),
                                 Set.of(),
                                 Set.of()
                         );
