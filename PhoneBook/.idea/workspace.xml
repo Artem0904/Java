@@ -6,17 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="897e7743-4753-4c94-af7f-801969205a8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configurations/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configurations/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapping/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapping/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapping/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapping/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/IAuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/SignInRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/SignInRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/UserCreationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/UserCreationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/seeders/ProductSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/seeders/ProductSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/seeders/UserSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/seeders/UserSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

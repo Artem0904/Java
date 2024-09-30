@@ -57,7 +57,7 @@ public class ProductSeeder implements CommandLineRunner {
             allImages.thenRun(() -> {
                 List<String> imagesUrls = imagesFutures.parallelStream()
                         .map(CompletableFuture::join)
-                        .collect(Collectors.toList());
+                        .collect(Collectors.toList());;
                 executor.shutdown();
                 List<Category> categories = new ArrayList<>();
                 int imageIndex = 0;
